@@ -1,0 +1,42 @@
+# EM.run
+#   @wrk_pool = WorkerPool.new
+#   @mwrk_reg = WorkerReg.new(@wrk_pool)
+#   @mgr_pool = ManagerPool.new
+#   @mgr_reg = ManagerReg.new(@mgr_pool)
+#   @task_mst = TaskMaster.new(@wkr_pool, @mgr_pool)
+# 
+#   @wkr_reg.start 
+#   @mgr_reg.start # also starts push status timer
+#   @task_mst.start
+#   API.new(@task_mst)
+# 
+# class WorkerPool
+#  @workers = {}
+#  def pop(:action)
+#  def add(:opts)
+#
+# class WorkerReg
+#  @wkr_pool
+#  def listen_and_add
+#
+# class ManagerPool
+#  @managers = {}
+#  def next
+#  def add(:opts)
+#
+# class ManagerReg
+#  @mgr_pool
+#  def listen_and_add
+#  def send_status
+#
+# class TaskMaster
+#  @wrk_pool
+#  @mgr_pool
+#  def do_task
+#  def listen_and_do_task
+#
+# class API
+#  @task_mst
+#  def search 
+#    @task_mst.pop
+#  def result # from local or remote cache
